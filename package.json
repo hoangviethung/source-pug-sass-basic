@@ -1,28 +1,31 @@
 {
-	"name": "source-pug-sass-basic",
-	"version": "1.0.0",
-	"description": "source-pug-sass-basic by hoangviethung",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"pug": "pug -w ./views/screens -o ./ -P",
-		"sass": "node-sass --watch ./scss -o ./css",
-		"dev": "concurrently --kill-others \"npm run pug\" \"npm run sass\""
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/hoangviethung/source-pug-sass-basic.git"
-	},
-	"keywords": [
-		"sources-pug-sass"
-	],
-	"author": "hoangviethung",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/hoangviethung/source-pug-sass-basic/issues"
-	},
-	"homepage": "https://github.com/hoangviethung/source-pug-sass-basic#readme",
-	"dependencies": {
-		"node-sass": "^6.0.1"
-	}
+    "name": "source-pug-sass-basic",
+    "version": "1.0.0",
+    "description": "source-pug-sass-basic by hoangviethung",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "pug": "pug -w ./views/screens -o ./ -P",
+        "sass": "node-sass --watch ./scss -o ./css",
+        "server": "live-server",
+        "dev": "concurrently --kill-others \"npm run pug\" \"npm run sass\" \"npm run server\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hoangviethung/source-pug-sass-basic.git"
+    },
+    "keywords": [
+        "sources-pug-sass"
+    ],
+    "author": "hoangviethung",
+    "license": "ISC",
+    "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
+        "jquery": "^3.6.0",
+        "node-sass": "^6.0.1",
+        "swiper": "^6.8.3"
+    },
+    "devDependencies": {
+        "concurrently": "^6.2.1"
+    }
 }
