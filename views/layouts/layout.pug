@@ -2,32 +2,28 @@ block var
 
 <!DOCTYPE html>
 html(lang="en")
-	head
-		// *** META *** //
-		include meta
-		// *** CSS MAIN *** //
-		include css
-		// *** CSS CUSTOM *** //
-		block css
-		// *** FAVICON *** //
-		link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
-		// *** TITLE *** //
-		title #{pageTitle}
-	body
-		// *** HEADER *** //
-		block header
-			include header
-		// *** MAIN *** //
-		main
-			block main
-			// *** PAGE NAME *** //
-			#page-verify(data-class=`${bodyClass}`)
-		// *** OVERLAY *** //
-		#overlay
-		// *** FOOTER *** //
-		block footer
-			include footer
-		// *** JS MAIN *** //
-		include js
-		// *** JS CUSTOM *** //
-		block js
+    head
+        // *** META *** //
+        include meta
+        // *** CSS MAIN *** //
+        include css
+        // *** CSS CUSTOM *** //
+        block css
+        // *** FAVICON *** //
+        link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+        // *** TITLE *** //
+        title #{pageTitle}
+    body(class=`${bodyClass}`)
+        // *** HEADER *** //
+        block header
+            include header
+        // *** MAIN *** //
+        main
+            block main
+        // *** FOOTER *** //
+        block footer
+            include footer
+        // *** JS MAIN *** //
+        include js
+        // *** JS CUSTOM *** //
+        block js

@@ -1,14 +1,16 @@
 {
     "name": "source-pug-sass-basic",
     "version": "1.0.0",
-    "description": "source-pug-sass-basic by hoangviethung",
+    "description": "Source Pug Sass Basic by Hoàng Việt Hùng",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "pug": "pug -w ./views/screens -o ./ -P",
-        "sass": "node-sass --watch ./scss -o ./css",
+        "compile:pug": "pug -w ./views/screens -o ./ -P",
+        "compile:sass": "node-sass ./scss -o ./css --watch --output-style compressed expanded --source-map true --source-map-contents true",
+        "delete:css": "del-cli --force ./css",
+        "build:sass": "node-sass ./scss -o ./css --watch",
         "server": "live-server",
-        "dev": "concurrently --kill-others \"npm run pug\" \"npm run sass\" \"npm run server\""
+        "dev": "npm-run-all -p compile:pug compile:sass server",
+        "build": "npm-run-all -p delete:css compile:pug build:sass"
     },
     "repository": {
         "type": "git",
@@ -22,10 +24,13 @@
     "dependencies": {
         "@fancyapps/fancybox": "^3.5.7",
         "jquery": "^3.6.0",
-        "node-sass": "^6.0.1",
         "swiper": "^6.8.3"
     },
     "devDependencies": {
-        "concurrently": "^6.2.1"
+        "del-cli": "^4.0.1",
+        "live-server": "^1.2.1",
+        "npm-run-all": "^4.1.5",
+        "pug": "^3.0.2",
+        "sass": "^1.50.0"
     }
 }
