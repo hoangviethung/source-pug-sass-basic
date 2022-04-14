@@ -6,7 +6,7 @@
     "scripts": {
         "compile:pug": "pug -w ./views/screens -o ./ -P",
         "compile:sass": "node-sass ./scss -o ./css --watch --output-style compressed expanded --source-map true --source-map-contents true",
-        "delete:css": "del-cli --force ./css",
+        "delete:css": "del-cli --force ./css/*",
         "build:sass": "node-sass ./scss -o ./css --watch",
         "server": "live-server",
         "dev": "npm-run-all -p compile:pug compile:sass server",
