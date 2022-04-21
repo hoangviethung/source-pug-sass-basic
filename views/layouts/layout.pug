@@ -5,12 +5,12 @@ html(lang="en")
     head
         // *** META *** //
         include meta
-        // *** CSS MAIN *** //
+        // *** CSS *** //
         include css
-        // *** CSS CUSTOM *** //
+        // *** CSS ON SCREEN *** //
         block css
         // *** FAVICON *** //
-        link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+        link(rel="shortcut icon", href="./assets/images/favicon.ico", type="image/x-icon")
         // *** TITLE *** //
         title #{pageTitle}
     body(class=`${bodyClass}`)
@@ -23,7 +23,7 @@ html(lang="en")
         // *** FOOTER *** //
         block footer
             include footer
-        // *** JS MAIN *** //
+        // *** JS *** //
         include js
-        // *** JS CUSTOM *** //
+        // *** JS ON SCREEN *** //
         block js
