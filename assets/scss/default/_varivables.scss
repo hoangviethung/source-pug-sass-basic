@@ -11,8 +11,8 @@ $theme-colors: (
 );
 
 $theme-fonts: (
-    "font-body": "Varta",
-    "font-icons": "Font Awesome 5 Pro",
+    "body": "Varta",
+    "icons": "Font Awesome 5 Pro",
 );
 
 :root {
@@ -25,6 +25,6 @@ $theme-fonts: (
     --color-info: #{map-get($map: $theme-colors, $key: "info")};
     --color-warning: #{map-get($map: $theme-colors, $key: "warning")};
     --color-error: #{map-get($map: $theme-colors, $key: "error")};
-    --font-body: #{map-get($map: $theme-fonts, $key: "font-body")};
-    --font-icons: #{map-get($map: $theme-fonts, $key: "font-icons")};
+    --font-body: #{map-get($map: $theme-fonts, $key: "body")};
+    --font-icons: #{map-get($map: $theme-fonts, $key: "icons")};
 }

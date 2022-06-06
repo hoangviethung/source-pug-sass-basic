@@ -1,4 +1,4 @@
-block var
+block params
 
 <!DOCTYPE html>
 html(lang="en")
@@ -12,8 +12,8 @@ html(lang="en")
         // *** FAVICON *** //
         link(rel="shortcut icon", href="./assets/images/favicon.ico", type="image/x-icon")
         // *** TITLE *** //
-        title #{pageTitle}
-    body(class=`${bodyClass}`)
+        title #{title_page}
+    body(class=`${class_body}`)
         // *** HEADER *** //
         block header
             include header
